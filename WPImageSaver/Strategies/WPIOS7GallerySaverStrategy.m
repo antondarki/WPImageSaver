@@ -44,38 +44,40 @@
     __weak typeof(self) weakSelf = self;
     [self.assetsLibrary addAssetsGroupAlbumWithName:albumName resultBlock:^(ALAssetsGroup *group) {
         if (!group) {
-            NSError *error = [NSError errorWithDomain:WPImagerSaverErrorDomain code:WPImageSaverFailureErrorCode userInfo:@{ NSLocalizedDescriptionKey : @"Failure save image to ALAsset: not found ALAssetsGroup" }];
-            [weakSelf notifyFailure:error];
-            return;
+            [weakSelf.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAlbum usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+                NSString *name = [group valueForProperty:ALAssetsGroupPropertyName];
+                if ([name isEqualToString:albumName]) {
+                    [weakSelf addImage:imageData toAssetsGroup:group];
+                }
+            } failureBlock:^(NSError *error) {
+                [weakSelf notifyFailure:error];
+            }];
+        } else {
+            [weakSelf addImage:imageData toAssetsGroup:group];
         }
-        [weakSelf.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAlbum usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
-            NSString *name = [group valueForProperty:ALAssetsGroupPropertyName];
-            if ([name isEqualToString:albumName]) {
-                [weakSelf.assetsLibrary writeImageDataToSavedPhotosAlbum:imageData metadata:nil completionBlock:^(NSURL *assetURL, NSError *error) {
-                    if (!error) {
-                        [weakSelf.assetsLibrary assetForURL:assetURL resultBlock:^(ALAsset *asset) {
-                            if ([group addAsset:asset]) {
-                                UIImage *image = [UIImage imageWithData:imageData];
-                                [weakSelf notifySuccess:image];
-                                return;
-                            } else {
-                                NSError *error = [NSError errorWithDomain:WPImagerSaverErrorDomain code:WPImageSaverFailureErrorCode userInfo:@{ NSLocalizedDescriptionKey : @"Failure save image to ALAsset" }];
-                                [weakSelf notifyFailure:error];
-                                return;
-                            }
-                        } failureBlock:^(NSError *error) {
-                            [weakSelf notifyFailure:error];
-                        }];
-                    } else {
-                        [weakSelf notifyFailure:error];
-                    }
-                }];
-            }
-        } failureBlock:^(NSError *error) {
-            [weakSelf notifyFailure:error];
-        }];
     } failureBlock:^(NSError *error) {
         [weakSelf notifyFailure:error];
+    }];
+}
+
+- (void)addImage:(NSData *)imageData toAssetsGroup:(ALAssetsGroup *)assetsGroup
+{
+    [self.assetsLibrary writeImageDataToSavedPhotosAlbum:imageData metadata:nil completionBlock:^(NSURL *assetURL, NSError *error) {
+        if (!error) {
+            [self.assetsLibrary assetForURL:assetURL resultBlock:^(ALAsset *asset) {
+                if ([assetsGroup addAsset:asset]) {
+                    UIImage *image = [UIImage imageWithData:imageData];
+                    [self notifySuccess:image];
+                } else {
+                    NSError *error = [NSError errorWithDomain:WPImagerSaverErrorDomain code:WPImageSaverFailureErrorCode userInfo:@{ NSLocalizedDescriptionKey : @"Failure save image to ALAsset" }];
+                    [self notifyFailure:error];
+                }
+            } failureBlock:^(NSError *error) {
+                [self notifyFailure:error];
+            }];
+        } else {
+            [self notifyFailure:error];
+        }
     }];
 }
 
