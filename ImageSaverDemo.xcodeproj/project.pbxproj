@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CAD454E1B190A600008F52C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD454D1B190A600008F52C /* main.m */; };
+		3CAD45511B190A600008F52C /* WPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD45501B190A600008F52C /* WPAppDelegate.m */; };
+		3CAD45541B190A600008F52C /* WPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD45531B190A600008F52C /* WPViewController.m */; };
+		3CAD45571B190A600008F52C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CAD45551B190A600008F52C /* Main.storyboard */; };
+		3CAD45591B190A600008F52C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CAD45581B190A600008F52C /* Images.xcassets */; };
+		3CAD455C1B190A600008F52C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CAD455A1B190A600008F52C /* LaunchScreen.xib */; };
+		3CAD45681B190A600008F52C /* ImageSaverDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD45671B190A600008F52C /* ImageSaverDemoTests.m */; };
+		3CAD45891B190C710008F52C /* WPImageGallerySaverStrategyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD457E1B190C710008F52C /* WPImageGallerySaverStrategyFactory.m */; };
+		3CAD458A1B190C710008F52C /* WPIOS7GallerySaverStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD45801B190C710008F52C /* WPIOS7GallerySaverStrategy.m */; };
+		3CAD458B1B190C710008F52C /* WPIOS8GallerySaverStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD45821B190C710008F52C /* WPIOS8GallerySaverStrategy.m */; };
+		3CAD458C1B190C710008F52C /* WPImageFileSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD45841B190C710008F52C /* WPImageFileSaver.m */; };
+		3CAD458D1B190C710008F52C /* WPImageGallerySaver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD45861B190C710008F52C /* WPImageGallerySaver.m */; };
+		3CAD45901B1918890008F52C /* WPImageSaverDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD458F1B1918890008F52C /* WPImageSaverDefines.m */; };
+		3CAD45931B191E900008F52C /* WPImageSaverUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD45921B191E900008F52C /* WPImageSaverUtils.m */; };
+		3CAD45971B19E0AA0008F52C /* WPImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD45961B19E0AA0008F52C /* WPImageViewController.m */; };
+		3CAD459A1B1A0D580008F52C /* WPImageSaverConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD45991B1A0D580008F52C /* WPImageSaverConstants.m */; };
+		3CDE18D91B1A4447005B2C64 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDE18D81B1A4447005B2C64 /* Photos.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CAD45621B190A600008F52C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CAD45401B190A600008F52C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CAD45471B190A600008F52C;
+			remoteInfo = ImageSaverDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3CAD45481B190A600008F52C /* ImageSaverDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSaverDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CAD454C1B190A600008F52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CAD454D1B190A600008F52C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3CAD454F1B190A600008F52C /* WPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPAppDelegate.h; sourceTree = "<group>"; };
+		3CAD45501B190A600008F52C /* WPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPAppDelegate.m; sourceTree = "<group>"; };
+		3CAD45521B190A600008F52C /* WPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPViewController.h; sourceTree = "<group>"; };
+		3CAD45531B190A600008F52C /* WPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPViewController.m; sourceTree = "<group>"; };
+		3CAD45561B190A600008F52C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3CAD45581B190A600008F52C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3CAD455B1B190A600008F52C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3CAD45611B190A600008F52C /* ImageSaverDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageSaverDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CAD45661B190A600008F52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CAD45671B190A600008F52C /* ImageSaverDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageSaverDemoTests.m; sourceTree = "<group>"; };
+		3CAD45781B190C710008F52C /* WPImageGallerySaverStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPImageGallerySaverStrategy.h; sourceTree = "<group>"; };
+		3CAD45791B190C710008F52C /* WPImageSaverDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPImageSaverDelegate.h; sourceTree = "<group>"; };
+		3CAD457A1B190C710008F52C /* WPImageSaverInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPImageSaverInterface.h; sourceTree = "<group>"; };
+		3CAD457D1B190C710008F52C /* WPImageGallerySaverStrategyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPImageGallerySaverStrategyFactory.h; sourceTree = "<group>"; };
+		3CAD457E1B190C710008F52C /* WPImageGallerySaverStrategyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPImageGallerySaverStrategyFactory.m; sourceTree = "<group>"; };
+		3CAD457F1B190C710008F52C /* WPIOS7GallerySaverStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPIOS7GallerySaverStrategy.h; sourceTree = "<group>"; };
+		3CAD45801B190C710008F52C /* WPIOS7GallerySaverStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPIOS7GallerySaverStrategy.m; sourceTree = "<group>"; };
+		3CAD45811B190C710008F52C /* WPIOS8GallerySaverStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPIOS8GallerySaverStrategy.h; sourceTree = "<group>"; };
+		3CAD45821B190C710008F52C /* WPIOS8GallerySaverStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPIOS8GallerySaverStrategy.m; sourceTree = "<group>"; };
+		3CAD45831B190C710008F52C /* WPImageFileSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPImageFileSaver.h; sourceTree = "<group>"; };
+		3CAD45841B190C710008F52C /* WPImageFileSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPImageFileSaver.m; sourceTree = "<group>"; };
+		3CAD45851B190C710008F52C /* WPImageGallerySaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPImageGallerySaver.h; sourceTree = "<group>"; };
+		3CAD45861B190C710008F52C /* WPImageGallerySaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPImageGallerySaver.m; sourceTree = "<group>"; };
+		3CAD458E1B1918890008F52C /* WPImageSaverDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPImageSaverDefines.h; sourceTree = "<group>"; };
+		3CAD458F1B1918890008F52C /* WPImageSaverDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPImageSaverDefines.m; sourceTree = "<group>"; };
+		3CAD45911B191E900008F52C /* WPImageSaverUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPImageSaverUtils.h; sourceTree = "<group>"; };
+		3CAD45921B191E900008F52C /* WPImageSaverUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPImageSaverUtils.m; sourceTree = "<group>"; };
+		3CAD45951B19E0AA0008F52C /* WPImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPImageViewController.h; sourceTree = "<group>"; };
+		3CAD45961B19E0AA0008F52C /* WPImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPImageViewController.m; sourceTree = "<group>"; };
+		3CAD45981B1A0D580008F52C /* WPImageSaverConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPImageSaverConstants.h; sourceTree = "<group>"; };
+		3CAD45991B1A0D580008F52C /* WPImageSaverConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPImageSaverConstants.m; sourceTree = "<group>"; };
+		3CDE18D81B1A4447005B2C64 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CAD45451B190A600008F52C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CDE18D91B1A4447005B2C64 /* Photos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CAD455E1B190A600008F52C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CAD453F1B190A600008F52C = {
+			isa = PBXGroup;
+			children = (
+				3CAD45711B190C710008F52C /* WPImageSaver */,
+				3CAD454A1B190A600008F52C /* ImageSaverDemo */,
+				3CAD45641B190A600008F52C /* ImageSaverDemoTests */,
+				3CAD45491B190A600008F52C /* Products */,
+				3CDE18DA1B1A52AF005B2C64 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3CAD45491B190A600008F52C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD45481B190A600008F52C /* ImageSaverDemo.app */,
+				3CAD45611B190A600008F52C /* ImageSaverDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CAD454A1B190A600008F52C /* ImageSaverDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD454F1B190A600008F52C /* WPAppDelegate.h */,
+				3CAD45501B190A600008F52C /* WPAppDelegate.m */,
+				3CAD45521B190A600008F52C /* WPViewController.h */,
+				3CAD45531B190A600008F52C /* WPViewController.m */,
+				3CAD45951B19E0AA0008F52C /* WPImageViewController.h */,
+				3CAD45961B19E0AA0008F52C /* WPImageViewController.m */,
+				3CAD45551B190A600008F52C /* Main.storyboard */,
+				3CAD45581B190A600008F52C /* Images.xcassets */,
+				3CAD455A1B190A600008F52C /* LaunchScreen.xib */,
+				3CAD454B1B190A600008F52C /* Supporting Files */,
+			);
+			path = ImageSaverDemo;
+			sourceTree = "<group>";
+		};
+		3CAD454B1B190A600008F52C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD454C1B190A600008F52C /* Info.plist */,
+				3CAD454D1B190A600008F52C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3CAD45641B190A600008F52C /* ImageSaverDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD45671B190A600008F52C /* ImageSaverDemoTests.m */,
+				3CAD45651B190A600008F52C /* Supporting Files */,
+			);
+			path = ImageSaverDemoTests;
+			sourceTree = "<group>";
+		};
+		3CAD45651B190A600008F52C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD45661B190A600008F52C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3CAD45711B190C710008F52C /* WPImageSaver */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD45941B198D5E0008F52C /* Utils */,
+				3CAD45721B190C710008F52C /* Constants */,
+				3CAD45771B190C710008F52C /* Interfaces */,
+				3CAD457B1B190C710008F52C /* Strategies */,
+				3CAD45831B190C710008F52C /* WPImageFileSaver.h */,
+				3CAD45841B190C710008F52C /* WPImageFileSaver.m */,
+				3CAD45851B190C710008F52C /* WPImageGallerySaver.h */,
+				3CAD45861B190C710008F52C /* WPImageGallerySaver.m */,
+			);
+			path = WPImageSaver;
+			sourceTree = "<group>";
+		};
+		3CAD45721B190C710008F52C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD45981B1A0D580008F52C /* WPImageSaverConstants.h */,
+				3CAD45991B1A0D580008F52C /* WPImageSaverConstants.m */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3CAD45771B190C710008F52C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD45781B190C710008F52C /* WPImageGallerySaverStrategy.h */,
+				3CAD45791B190C710008F52C /* WPImageSaverDelegate.h */,
+				3CAD457A1B190C710008F52C /* WPImageSaverInterface.h */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		3CAD457B1B190C710008F52C /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD457C1B190C710008F52C /* Factory */,
+				3CAD457F1B190C710008F52C /* WPIOS7GallerySaverStrategy.h */,
+				3CAD45801B190C710008F52C /* WPIOS7GallerySaverStrategy.m */,
+				3CAD45811B190C710008F52C /* WPIOS8GallerySaverStrategy.h */,
+				3CAD45821B190C710008F52C /* WPIOS8GallerySaverStrategy.m */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
+		3CAD457C1B190C710008F52C /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD457D1B190C710008F52C /* WPImageGallerySaverStrategyFactory.h */,
+				3CAD457E1B190C710008F52C /* WPImageGallerySaverStrategyFactory.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		3CAD45941B198D5E0008F52C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD458E1B1918890008F52C /* WPImageSaverDefines.h */,
+				3CAD458F1B1918890008F52C /* WPImageSaverDefines.m */,
+				3CAD45911B191E900008F52C /* WPImageSaverUtils.h */,
+				3CAD45921B191E900008F52C /* WPImageSaverUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3CDE18DA1B1A52AF005B2C64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CDE18D81B1A4447005B2C64 /* Photos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CAD45471B190A600008F52C /* ImageSaverDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CAD456B1B190A600008F52C /* Build configuration list for PBXNativeTarget "ImageSaverDemo" */;
+			buildPhases = (
+				3CAD45441B190A600008F52C /* Sources */,
+				3CAD45451B190A600008F52C /* Frameworks */,
+				3CAD45461B190A600008F52C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageSaverDemo;
+			productName = ImageSaverDemo;
+			productReference = 3CAD45481B190A600008F52C /* ImageSaverDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3CAD45601B190A600008F52C /* ImageSaverDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CAD456E1B190A600008F52C /* Build configuration list for PBXNativeTarget "ImageSaverDemoTests" */;
+			buildPhases = (
+				3CAD455D1B190A600008F52C /* Sources */,
+				3CAD455E1B190A600008F52C /* Frameworks */,
+				3CAD455F1B190A600008F52C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CAD45631B190A600008F52C /* PBXTargetDependency */,
+			);
+			name = ImageSaverDemoTests;
+			productName = ImageSaverDemoTests;
+			productReference = 3CAD45611B190A600008F52C /* ImageSaverDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CAD45401B190A600008F52C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Webparadox, LLC";
+				TargetAttributes = {
+					3CAD45471B190A600008F52C = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					3CAD45601B190A600008F52C = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 3CAD45471B190A600008F52C;
+					};
+				};
+			};
+			buildConfigurationList = 3CAD45431B190A600008F52C /* Build configuration list for PBXProject "ImageSaverDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3CAD453F1B190A600008F52C;
+			productRefGroup = 3CAD45491B190A600008F52C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CAD45471B190A600008F52C /* ImageSaverDemo */,
+				3CAD45601B190A600008F52C /* ImageSaverDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CAD45461B190A600008F52C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CAD45571B190A600008F52C /* Main.storyboard in Resources */,
+				3CAD455C1B190A600008F52C /* LaunchScreen.xib in Resources */,
+				3CAD45591B190A600008F52C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CAD455F1B190A600008F52C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CAD45441B190A600008F52C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CAD45541B190A600008F52C /* WPViewController.m in Sources */,
+				3CAD458B1B190C710008F52C /* WPIOS8GallerySaverStrategy.m in Sources */,
+				3CAD45931B191E900008F52C /* WPImageSaverUtils.m in Sources */,
+				3CAD45971B19E0AA0008F52C /* WPImageViewController.m in Sources */,
+				3CAD45891B190C710008F52C /* WPImageGallerySaverStrategyFactory.m in Sources */,
+				3CAD45901B1918890008F52C /* WPImageSaverDefines.m in Sources */,
+				3CAD45511B190A600008F52C /* WPAppDelegate.m in Sources */,
+				3CAD458D1B190C710008F52C /* WPImageGallerySaver.m in Sources */,
+				3CAD458A1B190C710008F52C /* WPIOS7GallerySaverStrategy.m in Sources */,
+				3CAD458C1B190C710008F52C /* WPImageFileSaver.m in Sources */,
+				3CAD459A1B1A0D580008F52C /* WPImageSaverConstants.m in Sources */,
+				3CAD454E1B190A600008F52C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CAD455D1B190A600008F52C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CAD45681B190A600008F52C /* ImageSaverDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CAD45631B190A600008F52C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CAD45471B190A600008F52C /* ImageSaverDemo */;
+			targetProxy = 3CAD45621B190A600008F52C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3CAD45551B190A600008F52C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CAD45561B190A600008F52C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3CAD455A1B190A600008F52C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CAD455B1B190A600008F52C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3CAD45691B190A600008F52C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3CAD456A1B190A600008F52C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3CAD456C1B190A600008F52C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ImageSaverDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3CAD456D1B190A600008F52C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ImageSaverDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3CAD456F1B190A600008F52C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ImageSaverDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageSaverDemo.app/ImageSaverDemo";
+			};
+			name = Debug;
+		};
+		3CAD45701B190A600008F52C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ImageSaverDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageSaverDemo.app/ImageSaverDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CAD45431B190A600008F52C /* Build configuration list for PBXProject "ImageSaverDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CAD45691B190A600008F52C /* Debug */,
+				3CAD456A1B190A600008F52C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CAD456B1B190A600008F52C /* Build configuration list for PBXNativeTarget "ImageSaverDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CAD456C1B190A600008F52C /* Debug */,
+				3CAD456D1B190A600008F52C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CAD456E1B190A600008F52C /* Build configuration list for PBXNativeTarget "ImageSaverDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CAD456F1B190A600008F52C /* Debug */,
+				3CAD45701B190A600008F52C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CAD45401B190A600008F52C /* Project object */;
+}

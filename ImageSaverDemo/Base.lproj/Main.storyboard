@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FCm-im-5ig">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="bFx-xP-BcQ">
+            <objects>
+                <navigationController id="FCm-im-5ig" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fws-3y-2fJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Pfm-Pg-1yn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Msb-6E-Nfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-190" y="331"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="WPViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiI-hm-YiH">
+                                <rect key="frame" x="74" y="155" width="171" height="30"/>
+                                <state key="normal" title="Save from URL to gallery">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveFromURLToGallery:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pXF-Kx-5YB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCB-Mh-BV0">
+                                <rect key="frame" x="63" y="195" width="194" height="30"/>
+                                <state key="normal" title="Save from NSData to gallery">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveFromNSDataToGallery:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="e3S-Z6-bgI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7W-At-yoL">
+                                <rect key="frame" x="87" y="233" width="146" height="30"/>
+                                <state key="normal" title="Save from URL to file">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveFromURLToFile:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wVW-tP-9M0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGD-J9-gXW">
+                                <rect key="frame" x="75.5" y="271" width="169" height="30"/>
+                                <state key="normal" title="Save from NSData to file">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveFromNSDataToFile:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p0U-4q-VXC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="KGD-J9-gXW" secondAttribute="centerX" id="CP2-wt-yOO"/>
+                            <constraint firstItem="zCB-Mh-BV0" firstAttribute="top" secondItem="kiI-hm-YiH" secondAttribute="bottom" constant="10" id="H38-94-dmp"/>
+                            <constraint firstAttribute="centerX" secondItem="p7W-At-yoL" secondAttribute="centerX" id="Hdl-jC-aUQ"/>
+                            <constraint firstAttribute="centerX" secondItem="kiI-hm-YiH" secondAttribute="centerX" id="Ht5-7i-rle"/>
+                            <constraint firstAttribute="centerY" secondItem="p7W-At-yoL" secondAttribute="centerY" constant="36" id="Jky-pa-B7B"/>
+                            <constraint firstItem="p7W-At-yoL" firstAttribute="top" secondItem="zCB-Mh-BV0" secondAttribute="bottom" constant="8" id="eZv-0n-hcB"/>
+                            <constraint firstItem="KGD-J9-gXW" firstAttribute="top" secondItem="p7W-At-yoL" secondAttribute="bottom" constant="8" id="saw-3L-Rp7"/>
+                            <constraint firstAttribute="centerX" secondItem="zCB-Mh-BV0" secondAttribute="centerX" id="z7P-7z-iKg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="etk-1w-9ID"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247" y="331"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="cO2-W4-Y1a">
+            <objects>
+                <viewController storyboardIdentifier="WPImageViewController" id="edY-fq-OEP" customClass="WPImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CpQ-9v-mj5"/>
+                        <viewControllerLayoutGuide type="bottom" id="dOQ-dY-rLR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DYu-cB-lX1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sdm-wY-Fi2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dOQ-dY-rLR" firstAttribute="top" secondItem="sdm-wY-Fi2" secondAttribute="bottom" id="4Fg-76-g4k"/>
+                            <constraint firstItem="sdm-wY-Fi2" firstAttribute="top" secondItem="DYu-cB-lX1" secondAttribute="top" id="H4z-kD-dvN"/>
+                            <constraint firstItem="sdm-wY-Fi2" firstAttribute="leading" secondItem="DYu-cB-lX1" secondAttribute="leading" id="Mlz-oe-eQ3"/>
+                            <constraint firstAttribute="trailing" secondItem="sdm-wY-Fi2" secondAttribute="trailing" id="QGB-gb-9av"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="enC-lQ-3AU"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="sdm-wY-Fi2" id="fas-EY-MsL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pyL-g6-ovq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="331"/>
+        </scene>
+    </scenes>
+</document>
